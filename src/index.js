@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+//mounting componente principale all interno del documento index.html + esempio prop nome Matteo
 ReactDOM.render(
   <React.StrictMode>
     <App nomeProp={"Matteo"} />

@@ -1,6 +1,9 @@
 import React from 'react';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
+//componente classe che renderizza una lista di persone simulando una chiamata al server attraverso la funzione setTimeout
+//aggiunta animazione di loading e evento onClick al bottone che riesegue la chiamata al server simulata
+
 class ListaPersone extends React.Component {
     constructor(props) {
         super(props);

@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import ListaPersone from "./ListaPersone";
 
+//esempio component class, modifica default page di react e renderizza il componente custom (creato da NOI) ListaPersone
+
 class App extends React.Component {
     constructor(props) {
         super(props);
