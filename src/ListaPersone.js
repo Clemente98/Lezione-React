@@ -1,5 +1,7 @@
 import React from 'react';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import axios from "axios";
+import {todos} from "./API";
 
 //componente classe che renderizza una lista di persone simulando una chiamata al server attraverso la funzione setTimeout
 //aggiunta animazione di loading e evento onClick al bottone che riesegue la chiamata al server simulata
@@ -26,21 +28,21 @@ class ListaPersone extends React.Component {
             lista: [],
         })
 
-        setTimeout(() => {
-            let datiDalServer = {
-                listaPusher: [
-                    "Daniel",
-                    "Fred",
-                    "Fiocco Bloods",
-                    "Krinkoli",
-                ]
+        // Make a request for a user with a given ID
+        todos((err, dati)=>{
+            if(err === true){
+                alert("errore generico controllare la console")
+            }else{
+                this.setState({
+                    lista: dati.todos,
+                    loading: false
+                });
             }
+        })
 
-            this.setState({
-                lista: datiDalServer.listaPusher,
-                loading: false
-            });
-        }, 2000)
+        //sijdiosndosn
+
+
     }
 
     renderItemList(item) {
@@ -50,7 +52,7 @@ class ListaPersone extends React.Component {
             return (
                 <div>
                     <p>
-                        {item}
+                        {item.id}
                     </p>
                 </div>
             )
