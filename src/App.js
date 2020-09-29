@@ -6,7 +6,7 @@ import ListaPersone from "./ListaPersone";
 //esempio component class, modifica default page di react e renderizza il componente custom (creato da NOI) ListaPersone
 
 class App extends React.Component {
-    constructor(props) {
+        constructor(props) {
         super(props);
         console.log("constructor");
         this.state = {
@@ -16,7 +16,6 @@ class App extends React.Component {
 
     componentDidMount() {
         console.log("component did mount");
-        //this.state.nome = "Clemente";
         this.setState({
             nome: "Clemente",
         });
@@ -49,6 +48,7 @@ class App extends React.Component {
                     >
                         Learn React
                     </a>
+
 
                     <ListaPersone/>
 
